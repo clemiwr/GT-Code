@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4cfe0f15-e8ca-4f91-b050-32baa7bd5543" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/GameTools/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameTools/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameTools/src/renderer/Components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1_2_Design/1_2_1_Branding_erstellen/Logo/PNG/Zeichenfläche 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/assets/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/src/main/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/src/main/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/src/renderer/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/src/renderer/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/src/renderer/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/src/renderer/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/src/renderer/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/src/renderer/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameTools/src/renderer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GameTools/src/renderer/index.tsx" afterDir="false" />
+    </list>
+    <list id="dc5cf9b5-197e-463b-8a13-edd83ae7aff6" name="Changes by clemens" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/GameTools" />
+  </component>
+  <component name="GitLabMergeRequestsSettings">{}</component>
+  <component name="GithubPullRequestsUISettings">{}</component>
+  <component name="KubernetesApiProvider">{}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2duPCtjQ1NXVu3DS5SfTmANnS2N" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GT/1_GameTools/1_4_App/1_4_0_APP_neu/GameTools/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\GT\\1_GameTools\\1_4_App\\1_4_0_APP_neu\\GameTools\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GT\1_GameTools\1_4_App\1_4_0_APP_neu\GameTools\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GT\1_GameTools\1_4_App\1_4_0_APP_neu\GameTools\src\renderer\Components" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.127" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cfe0f15-e8ca-4f91-b050-32baa7bd5543" name="Changes" comment="" />
+      <created>1710854865791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710854865791</updated>
+      <workItem from="1710854867001" duration="4370000" />
+      <workItem from="1710933388973" duration="1142000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
