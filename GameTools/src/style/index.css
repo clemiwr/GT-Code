@@ -24,7 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px, 1fr;
+  grid-template-rows: 1fr ;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
