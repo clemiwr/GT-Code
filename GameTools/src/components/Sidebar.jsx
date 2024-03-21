@@ -8,8 +8,8 @@ import React, { useState, useEffect } from "react";
 
 function Sidebar() {
   const [activeLink, setActiveLink] = useState("house");
-  const [isOpen, setIsOpen] = useState(false);
-  const [isTextVisible, setTextVisible] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+  const [isTextVisible, setTextVisible] = useState(true);
 
   useEffect(() => {
     if (isOpen) {
@@ -74,9 +74,8 @@ function Sidebar() {
   return (
     <Navbar
       expanded={isOpen}
-      className={`sidebar align-items-start ${
-        isOpen ? "sidebar-expanded" : "sidebar-unexpanded"
-      }`}>
+      className={`sidebar align-items-start ${isOpen ? "sidebar-expanded" : "sidebar-unexpanded"
+        }`}>
       <Container>
         <Nav className="d-flex flex-column ">
           <Nav.Link
