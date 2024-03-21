@@ -1,4 +1,8 @@
-.Navbar{
-    grid-column: 1;
-    grid-row:1;
-}
+.sidebar {
+    position: fixed !important;
+    height: 100vh;
+    width: 250px; /* adjust as needed */
+    left: 0;
+    top: 0;
+    overflow: auto;
+  }
