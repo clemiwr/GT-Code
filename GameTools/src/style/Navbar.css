@@ -1,8 +1,10 @@
 .sidebar {
     position: fixed !important;
     height: 100vh;
-    width: 250px; /* adjust as needed */
+    width: 70px; /* adjust as needed */
     left: 0;
     top: 0;
     overflow: auto;
+    background-color: #2b2f37;
+    
   }
