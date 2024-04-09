@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
   const [activeLink, setActiveLink] = useState("house");
@@ -79,18 +79,21 @@ function Sidebar() {
   );
 
   return (
+    
     <Navbar
       expanded={isOpen}
       className={`sidebar align-items-start ${isOpen ? "sidebar-expanded" : "sidebar-unexpanded"
         }`}>
       <Container>
+      
         <Nav className="d-flex flex-column ">
-          <Nav.Link
+          <NavLink
             className="nav-icon my-2"
             onClick={() => setIsOpen(!isOpen)}>
             {hamburger}
-          </Nav.Link>
-          <Nav.Link
+          </NavLink>
+          
+          <NavLink to="/"
             className="nav-icon my-2"
             href=""
             active={activeLink === "house"}
@@ -100,12 +103,13 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            <Link to="/Hohme">
+              
               {house}
               {isTextVisible && <span className="sidebar-text">Home</span>}
-            </Link>
-          </Nav.Link>
-          <Nav.Link
+            
+          </NavLink>
+          
+          <NavLink to="/DPI-Converter"
             className="nav-icon my-2"
             href=""
             active={activeLink === "mouse"}
@@ -115,14 +119,15 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            <Link to="/DPI-Converter">
+            
               {mouse}
               {isTextVisible && (
                 <span className="sidebar-text">Dpi-Converter</span>
               )}
-            </Link>
-          </Nav.Link>
-          <Nav.Link
+           
+          </NavLink>
+          
+          <NavLink to="/Controller-Tool"
             className="nav-icon my-2"
             href=""
             active={activeLink === "controller"}
@@ -132,16 +137,20 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            <Link to="/Controller-Tool">
+            
               {controller}
               {isTextVisible && (
                 <span className="sidebar-text">Controller Tool</span>
               )}
-            </Link>
-          </Nav.Link>
+           
+          </NavLink>
+          
         </Nav>
       </Container>
     </Navbar>
+
+              
+    
   );
 }
 

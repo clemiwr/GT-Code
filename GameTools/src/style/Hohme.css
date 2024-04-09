@@ -1,0 +1,23 @@
+a{ 
+    color:white;   
+    margin:10px;
+}
+a:hover{
+color:#45B8C9;
+}
+p{
+    width:45%;
+}
+
+.Text-Bild{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.icon{
+    width:45%;
+}
+.HohmeLink{
+    font-size: large;
+}
