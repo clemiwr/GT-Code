@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [activeLink, setActiveLink] = useState("house");
@@ -69,7 +70,7 @@ function Sidebar() {
       class="bi bi-list"
       viewBox="0 0 16 16"
       style={rotate}
-      >
+    >
       <path
         fill-rule="evenodd"
         d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
@@ -99,8 +100,10 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            {house}
-            {isTextVisible && <span className="sidebar-text">Home</span>}
+            <Link to="/Hohme">
+              {house}
+              {isTextVisible && <span className="sidebar-text">Home</span>}
+            </Link>
           </Nav.Link>
           <Nav.Link
             className="nav-icon my-2"
@@ -112,10 +115,12 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            {mouse}
-            {isTextVisible && (
-              <span className="sidebar-text">Dpi-Converter</span>
-            )}
+            <Link to="/DPI-Converter">
+              {mouse}
+              {isTextVisible && (
+                <span className="sidebar-text">Dpi-Converter</span>
+              )}
+            </Link>
           </Nav.Link>
           <Nav.Link
             className="nav-icon my-2"
@@ -127,10 +132,12 @@ function Sidebar() {
                 ? { color: "#45B8C9" }
                 : { color: "#e6e8db" }
             }>
-            {controller}
-            {isTextVisible && (
-              <span className="sidebar-text">Controller Tool</span>
-            )}
+            <Link to="/Controller-Tool">
+              {controller}
+              {isTextVisible && (
+                <span className="sidebar-text">Controller Tool</span>
+              )}
+            </Link>
           </Nav.Link>
         </Nav>
       </Container>
