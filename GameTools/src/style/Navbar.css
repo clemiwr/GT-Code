@@ -6,6 +6,8 @@
     top: 0;
     overflow: auto;
     background-color: #2b2f37;
+    box-shadow: 5px 0px 2px rgb(0,0,0,20%);
+
     
   }
   .sidebar-expanded {
