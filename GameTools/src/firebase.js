@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getDatabase } from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 
@@ -11,11 +10,11 @@ const firebaseConfig = {
   storageBucket: "gametools-3b434.appspot.com",
   messagingSenderId: "167943365611",
   appId: "1:167943365611:web:6337a55c2924a5e4cc2fae",
-  measurementId: "G-N63BGC3E55"
+  measurementId: "G-N63BGC3E55",
+  enableCorsCorrelation: "true"
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getDatabase(app);
-
+console.log(db);
 export { db };
