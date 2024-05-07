@@ -1,20 +1,63 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getFirestore } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB75NdEeiurJ0ZkGsBDVJyCJf8rXOKL5zU",
-  authDomain: "gametools-3b434.firebaseapp.com",
-  databaseURL: "https://gametools-3b434-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "gametools-3b434",
-  storageBucket: "gametools-3b434.appspot.com",
-  messagingSenderId: "167943365611",
-  appId: "1:167943365611:web:6337a55c2924a5e4cc2fae",
-  measurementId: "G-N63BGC3E55",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_DATABASE_URL,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
   enableCorsCorrelation: "true"
 };
 
+function checkAuth() {
+  return new Promise((resolve, reject) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+    if (user) {
+      resolve(true);
+    } else {
+      resolve(false);
+    }
+  });
+}
+
+function signup( email, password){
+  const auth = getAuth();
+return createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    
+    const user = userCredential.user;
+   
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+}
+function login(email, password){
+  const auth = getAuth();
+  return signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+   
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+  });
+}
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-console.log(db);
-export { db };
+
+export {db}
+export {signup}
+export {login}
+export {checkAuth}
+// const analytics = getAnalytics(app);

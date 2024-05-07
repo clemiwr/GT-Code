@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import "../../style/Hohme.css"
 import icon from "../../assets/Bild.svg";
 import { Mouse, Controller } from "../Icons";
+
 function Hohme() {
 
   return (
+    
     <div style={{ color: '#e6e8db' }}>
       <h1>Welcome to GameTools</h1>
       <div className='Text-Bild'>
