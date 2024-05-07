@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { login, signup } from '../../firebase';
+import '../../style/Login.css';
 function Login(props) {
     const [isLogin, setIsLogin] = useState(true);
     const [email, setEmail] = useState('');
@@ -28,31 +29,32 @@ function Login(props) {
     };
 
     return (
-        <>
-            <div>
-                <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
-                <form onSubmit={HandleClick}>
-                    <input
-                        type="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="submit">
-                        {isLogin ? 'Login' : 'Sign Up'}
-                    </button>
-                </form>
-                <button onClick={toggleMode}>
-                    Switch to {isLogin ? 'Sign Up' : 'Login'}
+        <div className="login-container">
+            <h1 className="login-title">Login</h1>
+            <p className="login-description">Please enter your credentials to login.</p>
+            <form className="login-form" onSubmit={HandleClick}>
+                <input
+                    className="login-input"
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    className="login-input"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button className="login-submit" type="submit">
+                    {isLogin ? 'Login' : 'Sign Up'}
                 </button>
-            </div>
-        </>
+            </form>
+            <button className="login-toggle-button" onClick={toggleMode}>
+                {isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
+            </button>
+        </div>
     );
 }
 
