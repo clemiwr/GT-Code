@@ -32,7 +32,7 @@ return createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     
     const user = userCredential.user;
-   
+   return user;
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -46,7 +46,7 @@ function login(email, password){
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-   
+   return user;
   })
   .catch((error) => {
     const errorCode = error.code;

@@ -7,11 +7,17 @@ function Login(props) {
 
     const HandleClick = (event) => {
         event.preventDefault();
-
+    
         const authPromise = isLogin ? login(email, password) : signup(email, password);
-        isLogin ? console.log('login') : console.log('signup');
-        authPromise.then(() => {
-            props.isSignedIn(true);
+    
+        authPromise.then((user) => {
+            console.log(user);
+            if (user) {
+                console.log('Authentication successful');
+                props.isSignedIn(true);
+            } else {
+                console.log('Authentication failed');
+            }
         }).catch((error) => {
             console.error("Authentication failed:", error);
         });
