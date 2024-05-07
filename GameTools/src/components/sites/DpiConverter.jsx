@@ -10,9 +10,9 @@ function DpiConverter() {
     const [toGameMultiplier, setToGameMultiplier] = useState(0);
     const [sensitivity, setSensitivity] = useState(0);
     const [result, setResult] = useState(0);
-    const [fromGame, setFromGame] = useState(""); // New state variable
-    const [toGame, setToGame] = useState(""); // New state variable
-    const [inputSensitivity, setInputSensitivity] = useState(""); // New state variable
+    const [fromGame, setFromGame] = useState(""); 
+    const [toGame, setToGame] = useState(""); 
+    const [inputSensitivity, setInputSensitivity] = useState(""); 
 
     useEffect(() => {
         const gamesRef = ref(db, 'Games');
@@ -27,7 +27,7 @@ function DpiConverter() {
     }, [fromGameMultiplier, toGameMultiplier, sensitivity]);
 
     const handleFromGameChange = (e) => {
-        setFromGame(e.target.value); // Update selected game
+        setFromGame(e.target.value); 
         if (e.target.value === "") {
             setFromGameMultiplier(0);
         } else {
@@ -75,7 +75,7 @@ function DpiConverter() {
             <div>
             <div className="game-select-container">
                 <select className="game-select" value={fromGame} onChange={handleFromGameChange}>
-                    <option value="">From Game</option>
+                    <option value="">From Game</option> 
                     {games.map(game => <option key={game.CalculationID} value={game.GameName}>{game.GameName}</option>)}
                 </select>
                 <button className="switch-button" onClick={handleSwitchClick}>< Switcher /></button>
