@@ -10,9 +10,9 @@ function DpiConverter() {
     const [toGameMultiplier, setToGameMultiplier] = useState(0);
     const [sensitivity, setSensitivity] = useState(0);
     const [result, setResult] = useState(0);
-    const [fromGame, setFromGame] = useState(""); 
-    const [toGame, setToGame] = useState(""); 
-    const [inputSensitivity, setInputSensitivity] = useState(""); 
+    const [fromGame, setFromGame] = useState(""); // New state variable
+    const [toGame, setToGame] = useState(""); // New state variable
+    const [inputSensitivity, setInputSensitivity] = useState(""); // New state variable
 
     useEffect(() => {
         const gamesRef = ref(db, 'Games');
@@ -27,7 +27,7 @@ function DpiConverter() {
     }, [fromGameMultiplier, toGameMultiplier, sensitivity]);
 
     const handleFromGameChange = (e) => {
-        setFromGame(e.target.value); 
+        setFromGame(e.target.value); // Update selected game
         if (e.target.value === "") {
             setFromGameMultiplier(0);
         } else {
@@ -71,23 +71,26 @@ function DpiConverter() {
     return ( 
       <div className="dpi-converter">
             <h1 className="title">DPI Converter</h1>
-            <p className="description">Lorem ipsum dolor sit amet consectetur.</p>
+            <p className="description">This tool allows you to convert your DPI between your games.</p>
             <div>
+
             <div className="game-select-container">
-                <select className="game-select" value={fromGame} onChange={handleFromGameChange}>
-                    <option value="">From Game</option> 
+                <select value={fromGame} onChange={handleFromGameChange}>
+                    <option value="">From Game</option>
                     {games.map(game => <option key={game.CalculationID} value={game.GameName}>{game.GameName}</option>)}
                 </select>
+
                 <button className="switch-button" onClick={handleSwitchClick}>< Switcher /></button>
-                <select className="game-select" value={toGame} onChange={handleToGameChange}>
+
+                <select value={toGame} onChange={handleToGameChange}>
                     <option value="">To Game</option>
                     {games.map(game => <option key={game.CalculationID} value={game.GameName}>{game.GameName}</option>)}
                 </select>
             </div>
+
             <input className="sensitivity-input" type="number" placeholder='From Sensitivity' value={inputSensitivity} min={0} onChange={handleSensitivityChange} />
-            <input className="result-input" type="number" value={result.toFixed(3)} disabled/>
-            </div>
-            
+            <input className="result-input" type="number" placeholder='Converted DPI' value={result.toFixed(3)} disabled/>
+            </div>  
       </div>
     );
 }
