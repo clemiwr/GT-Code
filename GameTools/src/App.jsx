@@ -11,6 +11,7 @@ import { checkAuth } from './firebase'
 function App() {
 
   const [isSignedIn, setisSignedIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   useEffect(() => {
     checkAuth().then((isAuthenticated) => {
       setisSignedIn(isAuthenticated);
@@ -21,14 +22,16 @@ function App() {
   return (
     <>
       {isSignedIn ? (
-        <div>
-          <Sidebar />
+        <div className={`wrapper-content ${isOpen ? '' : 'sidebar-collapsed'}`}>
+          <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}/>
           <Logo />
+          <div className='main-content'>
           <Routes>
             <Route path="/" element={<Hohme />} />
             <Route path="/DPI-Converter" element={<DpiConverter />} />
             <Route path="/Controller-Tool" element={<ControllerTool />} />
           </Routes>
+        </div>
         </div>
       ) : (
         <Login isSignedIn={setisSignedIn} />

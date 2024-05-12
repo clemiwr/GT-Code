@@ -26,15 +26,23 @@ a:hover {
 
 body {
   margin: 0;
-  display: grid;
-  grid-template-columns: 200px, 1fr;
-  grid-template-rows: 1fr ;
-  place-items: center;
+  
   min-width: 320px;
   min-height: 100vh;
   background-color: #25292f;
 }
-
+.wrapper-content{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr ;
+  place-items: center;
+}
+.wrapper-content.sidebar-collapsed {
+  grid-template-columns: 70px 1fr;
+}
+.main-content{
+  grid-column: 2;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
