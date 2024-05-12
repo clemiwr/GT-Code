@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword , signInAnonymously} from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -25,19 +25,30 @@ function checkAuth() {
     }
   });
 }
-
-function signup( email, password){
+function guestLogin (){
   const auth = getAuth();
-return createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    
-    const user = userCredential.user;
-   return user;
+  return signInAnonymously(auth)
+  .then(() => {
+    const successs = true;
+    return successs;
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    // ..
+    console.log('failed' , errorCode, errorMessage);  
+  });
+}
+function signup( email, password){
+  const auth = getAuth();
+  return createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    const user = userCredential.user;
+    return user;
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    
   });
 }
 function login(email, password){
@@ -60,4 +71,5 @@ export {db}
 export {signup}
 export {login}
 export {checkAuth}
+export {guestLogin}
 // const analytics = getAnalytics(app);

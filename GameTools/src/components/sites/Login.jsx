@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { login, signup } from '../../firebase';
+import { login, signup, guestLogin} from '../../firebase';
 import '../../style/Login.css';
 function Login(props) {
     const [isLogin, setIsLogin] = useState(true);
@@ -14,7 +14,6 @@ function Login(props) {
         authPromise.then((user) => {
             console.log(user);
             if (user) {
-                console.log('Authentication successful');
                 props.isSignedIn(true);
             } else {
                 console.log('Authentication failed');
@@ -22,6 +21,14 @@ function Login(props) {
         }).catch((error) => {
             console.error("Authentication failed:", error);
         });
+    }
+    const HandleClickGuest = () => {
+        const authPromise = guestLogin();
+        authPromise.then((sucesss) => {
+            if(sucesss){
+                props.isSignedIn(true);
+            }
+        })
     }
 
     const toggleMode = () => {
@@ -50,10 +57,15 @@ function Login(props) {
                 <button className="login-submit" type="submit">
                     {isLogin ? 'Login' : 'Sign Up'}
                 </button>
+                
             </form>
+            <button className='login-submit' onClick={HandleClickGuest}>    
+                Use as Guest
+                 </button>
             <button className="login-toggle-button" onClick={toggleMode}>
                 {isLogin ? 'Switch to Sign Up' : 'Switch to Login'}
             </button>
+            
         </div>
     );
 }
