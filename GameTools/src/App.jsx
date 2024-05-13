@@ -21,14 +21,16 @@ function App() {
   return (
     <>
       {isSignedIn ? (
-        <div>
+        <div className='content-wrapper'>
           <Sidebar />
           <Logo />
+          <div id='main-content'>
           <Routes>
             <Route path="/" element={<Hohme />} />
             <Route path="/DPI-Converter" element={<DpiConverter />} />
             <Route path="/Controller-Tool" element={<ControllerTool />} />
           </Routes>
+        </div>
         </div>
       ) : (
         <Login isSignedIn={setisSignedIn} />

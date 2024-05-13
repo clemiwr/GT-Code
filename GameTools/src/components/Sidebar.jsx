@@ -21,7 +21,18 @@ function Sidebar() {
     } else {
       setTextVisible(false);
     }
-  }, [isOpen]);
+  
+  const mainContent = document.getElementById("main-content");
+  if (mainContent) {
+    if (!isOpen) {
+      mainContent.style.margin = "0 0 0 70px";
+    } else {
+      mainContent.style.margin = "0 0 0 200px";
+    }
+  }
+}, [isOpen]);
+
+  
 
   const rotate = {
     transform: isOpen ? "rotate(0deg)" : "rotate(90deg)",
