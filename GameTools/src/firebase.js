@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
-import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword , signInAnonymously} from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInAnonymously } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_API_KEY,
@@ -25,51 +25,51 @@ function checkAuth() {
     }
   });
 }
-function guestLogin (){
+function guestLogin() {
   const auth = getAuth();
   return signInAnonymously(auth)
-  .then(() => {
-    const successs = true;
-    return successs;
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log('failed' , errorCode, errorMessage);  
-  });
+    .then(() => {
+      const successs = true;
+      return successs;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log('failed', errorCode, errorMessage);
+    });
 }
-function signup( email, password){
+function signup(email, password) {
   const auth = getAuth();
   return createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    const user = userCredential.user;
-    return user;
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    
-  });
+    .then((userCredential) => {
+      const user = userCredential.user;
+      return user;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+    });
 }
-function login(email, password){
+function login(email, password) {
   const auth = getAuth();
   return signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-   return user;
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-  });
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      return user;
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
 }
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-export {db}
-export {signup}
-export {login}
-export {checkAuth}
-export {guestLogin}
+export { db }
+export { signup }
+export { login }
+export { checkAuth }
+export { guestLogin }
 // const analytics = getAnalytics(app);
