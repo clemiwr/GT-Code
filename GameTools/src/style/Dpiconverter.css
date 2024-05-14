@@ -5,12 +5,12 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 100%;
     
   }
   
   .title {
     font-size: 2.5rem;
-    
     color: #e6e8db;
     margin-bottom: 1rem;
     text-decoration: underline;
@@ -56,9 +56,11 @@
     cursor: pointer;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     padding:0;
+
   }
   .switch-button:hover {
     border:#e6e8db solid 1px;
+    background-color: #45B8C9;
   }
   .sensitivity-input {
     height: 3rem;

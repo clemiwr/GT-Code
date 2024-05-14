@@ -25,7 +25,7 @@ function Sidebar() {
   const mainContent = document.getElementById("main-content");
   if (mainContent) {
     if (!isOpen) {
-      mainContent.style.margin = "0 0 0 70px";
+      mainContent.style.margin = "0 0 0 175px";
     } else {
       mainContent.style.margin = "0 0 0 200px";
     }
