@@ -1,0 +1,28 @@
+.controller-tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   justify-content: center;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 800px; /* Begrenzen Sie die Breite des Containers */
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  background-color: #25292f;}
+
+.controller-title {
+  font-size: 2.5rem;
+  color: #e6e8db;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.controller-description {
+  font-size: 1.2rem;
+  color: #e6e8db;
+  margin-bottom: 2rem;
+  max-width: 700px; /* Begrenzen Sie die Breite des Textes */
+  text-align: justify-all; /* Textausrichtung auf Blocksatz setzen */
+  align-items: center;
+}
