@@ -16,6 +16,7 @@
 
 .accordion-header h2 {
   margin: 0;
+  font-size:1.3rem;
 }
 
 .icon {
@@ -31,7 +32,7 @@
   max-height: 300px;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  justify-content: center;  
+
 }
 
 .accordion-content-inner {
