@@ -5,7 +5,6 @@
    justify-content: center;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   width: 100%;
   max-width: 800px; /* Begrenzen Sie die Breite des Containers */
   margin: 0 auto; /* Zentriert den Container horizontal */
