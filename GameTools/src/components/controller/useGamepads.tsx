@@ -1,38 +1,28 @@
-import React, {
-  createContext,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
-const GamepadsContext = createContext({});
+import { useEffect, useRef } from 'react';
 
-interface GamepadsProviderProps {
-  children: React.ReactNode;
+interface GamepadRef {
+  [key: number]: Gamepad;
 }
 
-const GamepadsProvider = ({ children }: GamepadsProviderProps) => {
-  const [gamepads, setGamepads] = useState({});
+export default function useGamepads(callback: (data: GamepadRef) => void) {
+  const gamepads = useRef<GamepadRef>([]);
   const requestRef = useRef<number>();
 
   var haveEvents = 'ongamepadconnected' in window;
 
-  const addGamepad = useCallback(
-    gamepad => {
-      setGamepads({
-        ...gamepads,
-        [gamepad.index]: {
-          buttons: gamepad.buttons,
-          id: gamepad.id,
-          axes: gamepad.axes,
-        },
-      });
+  const addGamepad = (gamepad: Gamepad) => {
+    gamepads.current = {
+      ...gamepads.current,
+      [gamepad.index]: gamepad,
+    };
 
-      // Handle controller input before render
-      // requestAnimationFrame(updateStatus);
-    },
-    [gamepads, setGamepads]
-  );
+    // Send data to external callback (like React state)
+    callback(gamepads.current);
+
+    // Handle controller input before render
+    // @TODO: Add API to hook callback into this
+    // requestAnimationFrame(updateStatus);
+  };
 
   /**
    * Adds game controllers during connection event listener
@@ -45,21 +35,20 @@ const GamepadsProvider = ({ children }: GamepadsProviderProps) => {
   /**
    * Finds all gamepads and adds them to context
    */
-  const scanGamepads = useCallback(() => {
+  const scanGamepads = () => {
     // Grab gamepads from browser API
     var detectedGamepads = navigator.getGamepads
       ? navigator.getGamepads()
       : navigator.webkitGetGamepads
-        ? navigator.webkitGetGamepads()
-        : [];
+      ? navigator.webkitGetGamepads()
+      : [];
 
     // Loop through all detected controllers and add if not already in state
     for (var i = 0; i < detectedGamepads.length; i++) {
-      if (detectedGamepads[i]) {
-        addGamepad(detectedGamepads[i]);
-      }
+      const newGamepads = detectedGamepads[i];
+      if (newGamepads && newGamepads !== null) addGamepad(newGamepads);
     }
-  }, [addGamepad]);
+  };
 
   // Add event listener for gamepad connecting
   useEffect(() => {
@@ -72,21 +61,15 @@ const GamepadsProvider = ({ children }: GamepadsProviderProps) => {
   });
 
   // Update each gamepad's status on each "tick"
-  const animate = useCallback(() => {
+  const animate = () => {
     if (!haveEvents) scanGamepads();
     requestRef.current = requestAnimationFrame(animate);
-  }, [requestRef, scanGamepads, haveEvents]);
+  };
 
   useEffect(() => {
     requestRef.current = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(requestRef.current!);
-  }, [animate]);
+  });
 
-  return (
-    <GamepadsContext.Provider value={{ gamepads, setGamepads }}>
-      {children}
-    </GamepadsContext.Provider>
-  );
-};
-
-export { GamepadsProvider, GamepadsContext };
+  return gamepads.current;
+}
