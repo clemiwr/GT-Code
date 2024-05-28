@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import '../../style/Accordion.css'; // Stellen Sie sicher, dass der Pfad zur CSS-Datei korrekt ist
+import '../style/Accordion.css'; // Stellen Sie sicher, dass der Pfad zur CSS-Datei korrekt ist
 
 function Accordion({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
