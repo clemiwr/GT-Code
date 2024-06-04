@@ -92,9 +92,9 @@ function ControllerTool() {
 
     return (
         <>
-            <div style={{ color: '#e6e8db' }}>
-                <h1>Willkommen bei GameTools!</h1>
-                <p>Dies ist die Controller Tool.</p>
+            <div style={{ color: '#e6e8db' }} className='controller-tool'>
+            <h1 className="title">Controller Tool</h1>
+                <p>This tool allows you to check the functionality of your games.</p>
             </div>
             <UseController />
         </>
