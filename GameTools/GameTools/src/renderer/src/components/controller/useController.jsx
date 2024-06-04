@@ -1,74 +1,76 @@
-  
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+
 function UseController() {
-  
-  return ( <> 
-    <div>
-    <svg
-      version="1.1"
-      id="Capa_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      x="0px"
-      y="0px"
-      width="600px"
-      height="500px"
-      xml:space="preserve"
-      viewBox="0 0 600 500"
-    >
-      <g>
-        <g>
-          <path
-            id="controller-b13"
-            name="down"
-            d="M114.003,255.595c-5.043,3.696-10.324,8.09-11.102,9.663c-1.353,2.705-3.244,17.252-2.889,22.24
+  return (
+    <>
+      <div>
+        <svg
+          version="1.1"
+          id="Capa_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          x="0px"
+          y="0px"
+          width="600px"
+          height="500px"
+          xmlSpace="preserve"
+          viewBox="0 0 600 500"
+        >
+          <g>
+            <g>
+              <path
+                id="controller-b13"
+                name="down"
+                d="M114.003,255.595c-5.043,3.696-10.324,8.09-11.102,9.663c-1.353,2.705-3.244,17.252-2.889,22.24
        c0.073,1.053,0.306,4.26,13.972,4.266l0.042,3.06v-3.06c13.666-0.006,13.898-3.213,13.972-4.271
        c0.355-4.976-1.53-19.523-2.889-22.234C124.407,263.851,119.682,259.762,114.003,255.595z"
-          />
+              />
 
-          <rect
-            id="controller-b8"
-            name="select"
-            x="227.994"
-            y="238.771"
-            width="18.898"
-            height="7.711"
-          />
+              <rect
+                id="controller-b8"
+                name="select"
+                x="227.994"
+                y="238.771"
+                width="18.898"
+                height="7.711"
+              />
 
-          <path
-            id="controller-b12"
-            name="up"
-            d="M114.003,232.84c5.686-4.167,10.404-8.256,11.108-9.669c1.353-2.699,3.244-17.246,2.889-22.24
+              <path
+                id="controller-b12"
+                name="up"
+                d="M114.003,232.84c5.686-4.167,10.404-8.256,11.108-9.669c1.353-2.699,3.244-17.246,2.889-22.24
        c-0.08-1.053-0.306-4.254-13.972-4.26c-13.708,0.006-13.935,3.207-14.015,4.26c-0.355,4.987,1.53,19.535,2.889,22.24
        C103.685,224.744,108.96,229.15,114.003,232.84z"
-          />
-          <path
-            id="controller-b14"
-            name="left"
-            d="M92.962,233.11c-2.46-1.229-14.584-2.925-20.918-2.925c-0.502,0-0.937,0.012-1.31,0.042
+              />
+              <path
+                id="controller-b14"
+                name="left"
+                d="M92.962,233.11c-2.46-1.229-14.584-2.925-20.918-2.925c-0.502,0-0.937,0.012-1.31,0.042
        c-1.059,0.074-4.266,0.301-4.271,13.966c0.006,13.709,3.213,13.936,4.266,14.009c0.379,0.031,0.82,0.043,1.316,0.043
        c6.34,0,18.464-1.688,20.918-2.925c1.671-0.839,6.353-6.573,9.676-11.102C98.936,239.181,94.529,233.893,92.962,233.11z"
-          />
-          <path
-            id="controller-b15"
-            name="right"
-            d="M157.284,230.234c-0.379-0.031-0.82-0.043-1.316-0.043c-6.34,0-18.464,1.689-20.924,2.925
+              />
+              <path
+                id="controller-b15"
+                name="right"
+                d="M157.284,230.234c-0.379-0.031-0.82-0.043-1.316-0.043c-6.34,0-18.464,1.689-20.924,2.925
        c-1.566,0.784-5.973,6.065-9.669,11.108c3.317,4.528,7.999,10.27,9.669,11.102c2.46,1.23,14.584,2.925,20.918,2.925
        c0.496,0,0.936-0.012,1.31-0.042c1.059-0.074,4.266-0.3,4.271-13.966c0-0.05,0-0.092,0-0.129
        C161.525,230.528,158.336,230.301,157.284,230.234z"
-          />
-          <circle id="controller-b3" cx="465.824" cy="194.529" r="19.866" />
-          <circle id="controller-b1" cx="512.446" cy="241.152" r="19.865" />
-          <circle id="controller-b0" cx="465.824" cy="287.774" r="19.865" />
-          <circle id="controller-b2" cx="419.202" cy="241.152" r="19.865" />
-          <polygon
-            id="controller-b9"
-            name="select"
-            points="333.062,246.586
+              />
+              <circle id="controller-b3" cx="465.824" cy="194.529" r="19.866" />
+              <circle id="controller-b1" cx="512.446" cy="241.152" r="19.865" />
+              <circle id="controller-b0" cx="465.824" cy="287.774" r="19.865" />
+              <circle id="controller-b2" cx="419.202" cy="241.152" r="19.865" />
+              <polygon
+                id="controller-b9"
+                name="select"
+                points="333.062,246.586
           349.171,241.751 333.062,237.381"
-          />
-          <path
-            id="layout"
-            d="M561.234,241.611c-2.441-18.305-10.171-52.075-43.531-75.264l-8.14-31.328c0,0-0.813-7.729-10.985-13.428
+              />
+              <path
+                id="layout"
+                d="M561.234,241.611c-2.441-18.305-10.171-52.075-43.531-75.264l-8.14-31.328c0,0-0.813-7.729-10.985-13.428
        c0,0,0.612-5.288-8.745-7.729c-9.357-2.442-31.127-7.117-56.549,1.426c0,0-3.868,1.016-3.66,6.714c0,0-12.001,5.899-14.443,16.885
        c-2.441,10.985-5.697,24.816-5.697,24.816h-36.916H211.195h-39.56c0,0-3.256-13.831-5.698-24.816s-14.443-16.885-14.443-16.885
        c0.202-5.698-3.66-6.714-3.66-6.714c-25.429-8.543-47.191-3.868-56.549-1.426c-9.357,2.441-8.746,7.729-8.746,7.729
@@ -159,154 +161,148 @@ function UseController() {
         M465.824,313.759c-14.327,0-25.985-11.658-25.985-25.985s11.658-25.985,25.985-25.985c14.326,0,25.985,11.658,25.985,25.985
        C491.804,302.101,480.15,313.759,465.824,313.759z M512.446,267.137c-14.327,0-25.985-11.658-25.985-25.985
        s11.658-25.985,25.985-25.985s25.985,11.658,25.985,25.985C538.426,255.479,526.772,267.137,512.446,267.137z"
-          />
-          <path
-            d="M270.437,203.63c1.407,0.997,2.993,1.444,4.541,1.462c1.181,0,2.167-0.171,3.103-0.52
+              />
+              <path
+                d="M270.437,203.63c1.407,0.997,2.993,1.444,4.541,1.462c1.181,0,2.167-0.171,3.103-0.52
        c0.067-0.024,0.116-0.074,0.184-0.099c0.012-0.006,0.031,0,0.043-0.006c1.334-0.502,2.466-1.279,3.292-2.454
        c1.114-1.579,1.377-3.292,0.704-5.116c-0.472-1.279-1.334-2.265-2.473-2.986c-0.563-0.355-1.138-0.631-1.72-0.839
        c-1.806-0.703-3.703-0.74-5.667-0.11c-1.396,0.447-2.577,1.236-3.464,2.412c-1.193,1.585-1.53,3.341-0.888,5.232
        C268.527,201.874,269.353,202.859,270.437,203.63z"
-       fill="#e6e8db"
-          />
+                fill="#e6e8db"
+              />
 
-          <circle
-            cx="290.000"
-            cy="295.000"
-            r="37"
-            width="50.898"
-            height="100.711"
-            
-            fill="#e6e8db"
-          />
-          <rect
-            x="227.994"
-            y="190.0"
-            width="121.898"
-            stroke="#e6e8db"
-            height="25.5"
-            
-            fill="#e6e8db"
-          />
+              <circle
+                cx="290.000"
+                cy="295.000"
+                r="37"
+                width="50.898"
+                height="100.711"
+                fill="#e6e8db"
+              />
+              <rect
+                x="227.994"
+                y="190.0"
+                width="121.898"
+                stroke="#e6e8db"
+                height="25.5"
+                fill="#e6e8db"
+              />
 
-          <rect
-            id="controller-b4"
-            x="83.5"
-            y="110.0"
-            width="70"
-            height="20"
-            rx="16.5"
-            stroke-width="3"
-          ></rect>
-          <rect
-            id="controller-b5"
-            x="429.5"
-            y="110.0"
-            width="70"
-            height="20"
-            rx="16.5"
-            stroke-width="3"
-          ></rect>
+              <rect
+                id="controller-b4"
+                x="83.5"
+                y="110.0"
+                width="70"
+                height="20"
+                rx="16.5"
+                strokeWidth="3"
+              ></rect>
+              <rect
+                id="controller-b5"
+                x="429.5"
+                y="110.0"
+                width="70"
+                height="20"
+                rx="16.5"
+                strokeWidth="3"
+              ></rect>
 
-          <rect
-            id="controller-b6"
-            x="99.994"
-            y="50.0"
-            height="50.898"
-            width="35.5"
-            fill="black"
-            rx="19"
-            ry="10"
-          />
+              <rect
+                id="controller-b6"
+                x="99.994"
+                y="50.0"
+                height="50.898"
+                width="35.5"
+                fill="black"
+                rx="19"
+                ry="10"
+              />
 
-          <rect
-            id="controller-b7"
-            x="448.994"
-            y="50.0"
-            height="50.898"
-            width="35.5"
-            fill="black"
-            rx="19"
-            ry="10"
-          />
+              <rect
+                id="controller-b7"
+                x="448.994"
+                y="50.0"
+                height="50.898"
+                width="35.5"
+                fill="black"
+                rx="19"
+                ry="10"
+              />
 
-          <circle
-            id="controller-b10-below"
-            name="left-stick"
-            cx="200.000"
-            cy="325.000"
-            data-original-x-position="200.000"
-            data-original-y-position="325.000"
-            r="15"
-            width="50.898"
-            height="100.711"
-            stroke="black"
-            fill="black"
-          />
+              <circle
+                id="controller-b10-below"
+                name="left-stick"
+                cx="200.000"
+                cy="325.000"
+                data-original-x-position="200.000"
+                data-original-y-position="325.000"
+                r="15"
+                width="50.898"
+                height="100.711"
+                stroke="black"
+                fill="black"
+              />
 
-          <circle
-            id="controller-b10"
-            name="left-stick"
-            cx="200.000"
-            cy="325.000"
-            data-original-x-position="200.000"
-            data-original-y-position="325.000"
-            r="35"
-            width="50.898"
-            height="100.711"
-            fill="#5E0000"
-          />
+              <circle
+                id="controller-b10"
+                name="left-stick"
+                cx="200.000"
+                cy="325.000"
+                data-original-x-position="200.000"
+                data-original-y-position="325.000"
+                r="35"
+                width="50.898"
+                height="100.711"
+                fill="#5E0000"
+              />
 
-          <circle
-            id="controller-b11-bottom"
-            name="stick-right"
-            cx="381.000"
-            cy="325.000"
-            data-original-x-position="381.000"
-            data-original-y-position="325.000"
-            r="15"
-            width="50.898"
-            height="100.711"
-            stroke="black"
-            fill="black"
-          />
+              <circle
+                id="controller-b11-bottom"
+                name="stick-right"
+                cx="381.000"
+                cy="325.000"
+                data-original-x-position="381.000"
+                data-original-y-position="325.000"
+                r="15"
+                width="50.898"
+                height="100.711"
+                stroke="black"
+                fill="black"
+              />
 
-          <circle
-            id="controller-b11"
-            name="stick-right"
-            cx="381.000"
-            cy="325.000"
-            data-original-x-position="381.000"
-            data-original-y-position="325.000"
-            r="35"
-            width="50.898"
-            height="100.711"
-            fill="#5E0000"
-          />
-        </g>
-      </g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-      <g></g>
-    </svg>
-  
-  </div>
-  </>
-  );
+              <circle
+                id="controller-b11"
+                name="stick-right"
+                cx="381.000"
+                cy="325.000"
+                data-original-x-position="381.000"
+                data-original-y-position="325.000"
+                r="35"
+                width="50.898"
+                height="100.711"
+                fill="#5E0000"
+              />
+            </g>
+          </g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+          <g></g>
+        </svg>
+      </div>
+    </>
+  )
 }
 
-export default UseController;
-
-
- 
+export default UseController
