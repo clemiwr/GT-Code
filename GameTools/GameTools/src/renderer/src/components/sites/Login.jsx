@@ -4,10 +4,14 @@
 import React, { useState } from 'react'
 import { login, signup, guestLogin } from '../../firebase'
 import '../../style/Login.css'
+import { useLocation } from 'react-router-dom'
+
 function Login(props) {
   const [isLogin, setIsLogin] = useState(true)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+
+  let location = useLocation()
 
   const HandleClick = (event) => {
     event.preventDefault()
@@ -18,6 +22,7 @@ function Login(props) {
       .then((user) => {
         console.log(user)
         if (user) {
+          location.pathname = '/'
           props.isSignedIn(true)
         } else {
           console.log('Authentication failed')
@@ -31,6 +36,7 @@ function Login(props) {
     const authPromise = guestLogin()
     authPromise.then((sucesss) => {
       if (sucesss) {
+        location.pathname = '/'
         props.isSignedIn(true)
       }
     })
