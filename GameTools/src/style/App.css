@@ -12,6 +12,9 @@
   top:10px;
   right:10px;
   transition: filter 300ms;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-drag: none;
 }
 .logo:hover {
   
